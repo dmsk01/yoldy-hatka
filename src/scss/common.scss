@@ -22,6 +22,12 @@
   font-weight: 700;
   @include adaptiveValue("font-size", 43, 26);
   @include adaptiveValue("line-height", 59, 36);
+  &_bigger {
+    @media (max-width: $mobile) {
+      font-size: 30px;
+      line-height: 39px;
+    }
+  }
 }
 
 .subtitle {
@@ -51,6 +57,22 @@
   &_small {
     max-width: 840px;
     width: 100%;
+  }
+  &_horizontal {
+    display: flex;
+    margin: 0 -30px;
+    & > * {
+      padding: 0 30px;
+      flex: 0 1 50%;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin: 0;
+      & > * {
+        padding: 0;
+        flex: 1 1 100%;
+      }
+    }
   }
 
   &__button {
@@ -173,9 +195,6 @@
 // Breadcrumps ======
 
 .breadcrumps {
-  &__inner {
-  }
-
   &__link {
     position: relative;
     display: inline-block;
@@ -239,6 +258,9 @@ div[class*="__image_mobile"] {
   }
 }
 
+div[class*="__container_1060"] {
+  max-width: 1060px;
+}
 div[class*="__container_1120"] {
   max-width: 1120px;
 }
@@ -254,7 +276,7 @@ div[class*="__container_1360"] {
 div[class*="__container_1400"] {
   max-width: 1400px;
 }
-div[class*="__container_1540"] {
+div[class*="__container_1500"] {
   max-width: 1540px;
 }
 div[class*="__container_mobile"] {
@@ -263,4 +285,12 @@ div[class*="__container_mobile"] {
   @media (max-width: $mobile) {
     padding: 0 16px;
   }
+}
+
+// flex element
+
+@mixin flex-element($size) {
+  flex: 0 1 #{$size}px;
+  max-width: #{$size}px;
+  width: 100%;
 }

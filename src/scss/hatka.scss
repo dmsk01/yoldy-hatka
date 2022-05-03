@@ -26,6 +26,21 @@
       margin-bottom: 120px;
     }
   }
+  &__handy-catalog {
+    margin-bottom: 195px;
+    @media (max-width: $pc) {
+      margin-bottom: 120px;
+    }
+  }
+  &__order-flow {
+    margin-bottom: 195px;
+    @media (max-width: $pc) {
+      margin-bottom: 120px;
+    }
+  }
+  &__account-func {
+    margin-bottom: 30px;
+  }
 }
 
 .creation-history {
@@ -91,6 +106,7 @@
 
 .team-work {
   @media (min-width: $pc) {
+    margin-top: -80px;
     background: url("../img/icons/yo-big.svg") left -76% top 50px no-repeat;
   }
   &__container {
@@ -98,7 +114,7 @@
   }
 
   &__title {
-    max-width: 840px;
+    max-width: 740px;
     width: 100%;
     margin-bottom: 40px;
     @media (max-width: $mobile) {
@@ -121,6 +137,197 @@
     @media (max-width: $mobile) {
       max-width: none;
       width: 170%;
+    }
+  }
+}
+
+// Handy catalog section =====
+
+.handy-catalog {
+  &__inner {
+    display: flex;
+    align-items: center;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__info {
+    @include flex-element(500);
+    padding-left: 60px;
+    margin-right: 80px;
+    @media (max-width: $pc) {
+      padding-left: 0;
+    }
+    @media (max-width: $tablet) {
+      margin-right: 30px;
+    }
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    @include flex-element(840);
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__image {
+  }
+}
+
+// Order flow section ====
+
+.order-flow {
+  &__info-block {
+    margin-left: auto;
+    margin-right: 190px;
+    @include flex-element(420);
+    @media (max-width: $pc) {
+      margin-bottom: 40px;
+      margin-left: 0;
+      margin-right: auto;
+      @include flex-element(840);
+    }
+    @media (max-width: $mobile) {
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    margin-top: -16%;
+    padding-left: 140px;
+    @media (max-width: $pc) {
+      margin-top: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+// Account functional section ====
+
+.account-func {
+  &__intro {
+    margin-bottom: 95px;
+    @media (max-width: $tablet) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__content {
+  }
+}
+
+.account-func {
+  &__heading {
+    @media (max-width: $mobile) {
+      margin-bottom: 8px;
+    }
+  }
+  &__content {
+  }
+
+  &__slider {
+    padding-left: percent(144, 1680);
+    @media (max-width: $tablet) {
+      padding-left: 16px;
+    }
+    @media (max-width: em(768)) {
+      padding-right: 16px;
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1432px;
+    margin: 16px auto 0 0;
+    margin-right: auto;
+    @media (max-width: em(1600)) {
+      max-width: none;
+      padding-right: 16px;
+    }
+    @media (max-width: $tablet) {
+      margin-top: 35px;
+    }
+    @media (max-width: $mobile) {
+      padding-right: 0;
+    }
+  }
+  &__scroll {
+    width: 100%;
+    height: 5px;
+  }
+  &__paggination {
+    margin-left: 77px;
+    flex: 0 0 215px;
+    @media (max-width: em(992)) {
+      margin-bottom: 40px;
+      margin-left: auto;
+    }
+  }
+}
+
+.paggination-servers {
+  padding: 65px 0;
+  @media (max-width: em(992)) {
+    padding: 0;
+    padding-right: 16px;
+  }
+  @media (max-width: $mobile) {
+    padding: 0;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    @media (max-width: em(992)) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__prev {
+    margin-right: 26px;
+  }
+
+  &__next {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      display: inline-block;
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      background: #40404d;
+      transform: translate(54px, -50%);
+      z-index: -1;
+      @media (max-width: $tablet) {
+        display: none;
+      }
     }
   }
 }

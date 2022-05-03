@@ -32,7 +32,7 @@ function initSliders() {
       modules: [Navigation, Scrollbar],
       observer: true,
       observeParents: true,
-      slidesPerView: 2.5,
+      slidesPerView: 2.3,
       spaceBetween: 70,
       autoHeight: false,
       speed: 800,
@@ -63,9 +63,8 @@ function initSliders() {
       // Скроллбар
 
       scrollbar: {
-        el: ".servers-catalog__scroll .swiper-scrollbar",
+        el: ".account-func__scroll .swiper-scrollbar",
         draggable: true,
-        dragSize: 400,
       },
 
       // Кнопки "влево/вправо"
@@ -86,7 +85,11 @@ function initSliders() {
           spaceBetween: 20,
         },
         992: {
-          slidesPerView: 2.5,
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1200: {
+          slidesPerView: 2.3,
           spaceBetween: 70,
         },
       },

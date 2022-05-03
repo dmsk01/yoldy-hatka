@@ -2084,19 +2084,19 @@
   }
 }
 
-.swiper-slide {
-  &__image {
-    border-radius: 5px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-  }
-}
+// .swiper-slide {
+//   &__image {
+//     border-radius: 5px;
+//     overflow: hidden;
+//     width: 100%;
+//     max-width: 100%;
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: contain;
+//     }
+//   }
+// }
 
 .servers-catalog {
   &__paggination {
