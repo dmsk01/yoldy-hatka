@@ -15,6 +15,9 @@
     //   line-height: math.div(28, 16);
     // }
   }
+  &_dark {
+    color: $mainDark;
+  }
 }
 
 .title {
@@ -28,6 +31,9 @@
       line-height: 39px;
     }
   }
+  &_dark {
+    color: $mainDark;
+  }
 }
 
 .subtitle {
@@ -37,6 +43,9 @@
   @include adaptiveValue("line-height", 37, 28);
   &_yellow {
     color: $mainYellow;
+  }
+  &_thin {
+    font-weight: 400;
   }
   &_noshrink {
     font-size: 26px;

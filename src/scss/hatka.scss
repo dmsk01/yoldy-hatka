@@ -41,6 +41,18 @@
   &__account-func {
     margin-bottom: 30px;
   }
+  &__clients-reviews {
+    margin-bottom: 150px;
+    @media (max-width: $pc) {
+      margin-bottom: 120px;
+    }
+  }
+  &__project-technologies {
+    margin-bottom: 150px;
+    @media (max-width: $pc) {
+      margin-bottom: 120px;
+    }
+  }
 }
 
 .creation-history {
@@ -329,5 +341,238 @@
         display: none;
       }
     }
+  }
+}
+
+// Reviews section =====
+
+.clients-reviews {
+  &__container {
+    max-width: 1260px;
+  }
+
+  &__inner {
+    display: flex;
+    @media (max-width: $pc) {
+      flex-direction: column;
+    }
+  }
+
+  &__client-part {
+    @include flex-element(560);
+    margin-right: 40px;
+    @media (max-width: $pc) {
+      flex: 1 1 100%;
+      max-width: none;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 55px;
+    }
+  }
+
+  &__agency-part {
+    @include flex-element(660);
+    @media (max-width: $pc) {
+      flex: 1 1 100%;
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
+.client-part {
+  &__title {
+    margin-bottom: 33px;
+    text-align: right;
+    @media (max-width: $mobile) {
+      text-align: left;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $pc) {
+      flex-direction: row;
+      margin: 0 -20px;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    @media (max-width: $pc) {
+      padding: 0 20px;
+      flex: 0 1 50%;
+    }
+    @media (max-width: $tablet) {
+      padding: 0;
+      flex: 1 1 100%;
+    }
+  }
+
+  &__person {
+    display: flex;
+  }
+
+  &__avatar {
+    flex: 0 0 140px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 70px;
+    @media (max-width: $mobile) {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
+      margin-right: 5px;
+    }
+  }
+
+  &__info {
+  }
+
+  &__name {
+    margin-bottom: 6px;
+    @include adaptiveValue("font-size", 27, 16);
+    @include adaptiveValue("line-height", 37, 28);
+  }
+
+  &__post {
+    color: #d2d2d2;
+  }
+
+  &__quote {
+    padding: 30px;
+    background: #d2d2d2;
+    margin-left: 210px;
+    margin-top: -50px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 1px;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 45px 32px 0;
+      border-color: transparent #d2d2d2 transparent transparent;
+      transform: translate(-100%, 0);
+    }
+    @media (max-width: em(1080)) {
+      margin-top: 0;
+    }
+    @media (max-width: $mobile) {
+      padding: 24px 16px 38px;
+      margin-left: 50px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.agency-part {
+  padding: 137px 70px 137px 100px;
+  background: #d2d2d2;
+  color: #2f2f39;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 90px 90px 0;
+    border-color: transparent $mainDark transparent transparent;
+    @media (max-width: $mobile) {
+      border-width: 0 40px 40px 0;
+    }
+  }
+  @media (max-width: $mobile) {
+    padding: 64px 20px 147px;
+  }
+  &__box {
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 55px;
+    @media (max-width: $mobile) {
+      margin-bottom: 35px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $mainDark;
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// Project technologies section =====
+
+.project-technologies {
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 44px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    @media (max-width: $pc) {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    flex: 0 0 140px;
+    @media (max-width: $pc) {
+      margin-bottom: 16px;
+    }
+  }
+}
+.item-technology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 23px;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 21px;
+    line-height: 32px;
   }
 }
