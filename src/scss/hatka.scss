@@ -1,0 +1,126 @@
+.page__hero {
+  @include adaptiveValue("padding-top", 130, 50);
+  margin-bottom: 130px;
+  @media (max-width: $mobile) {
+    margin-bottom: 120px;
+  }
+}
+
+.page__more {
+  margin-bottom: 85px;
+  @media (max-width: $mobile) {
+    margin-bottom: 120px;
+  }
+}
+
+// Hatka home page About block ====
+.home-about {
+  &__creation-history {
+    @media (max-width: $pc) {
+      margin-bottom: 120px;
+    }
+  }
+  &__team-work {
+    margin-bottom: 130px;
+    @media (max-width: $mobile) {
+      margin-bottom: 120px;
+    }
+  }
+}
+
+.creation-history {
+  &__body {
+    display: flex;
+    justify-content: center;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    flex: 0 1 560px;
+    max-width: 560px;
+    width: 100%;
+    margin-right: 90px;
+    @media (max-width: $pc) {
+      margin-right: 30px;
+    }
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__content {
+    flex: 610px;
+    max-width: 610px;
+    width: 100%;
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      padding: 0 percent(90, 768);
+    }
+  }
+
+  &__image {
+  }
+}
+.info-history {
+  & > *:not(:last-child) {
+    margin-bottom: 40px;
+    @media (max-width: $mobile) {
+      margin-bottom: 25px;
+    }
+  }
+  &__title {
+  }
+
+  &__info-block {
+  }
+
+  &__heading {
+    margin-bottom: 12px;
+    @media (max-width: $mobile) {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+// Team work timeline section =====
+
+.team-work {
+  @media (min-width: $pc) {
+    background: url("../img/icons/yo-big.svg") left -76% top 50px no-repeat;
+  }
+  &__container {
+    overflow-x: scroll;
+  }
+
+  &__title {
+    max-width: 840px;
+    width: 100%;
+    margin-bottom: 40px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 -15px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    @media (max-width: $pc) {
+      margin: 0;
+    }
+    @media (max-width: $mobile) {
+      max-width: none;
+      width: 170%;
+    }
+  }
+}

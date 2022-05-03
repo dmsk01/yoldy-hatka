@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Hatka"
+})
+
+<body id="hatka-home">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page hatka-home">
+			<div class="page__hero">
+				@@include('html/hatka/home/_hero.htm',{})
+			</div>
+			<div class="page__more">
+				@@include('html/_more-project-home.htm',{})
+			</div>
+			@@include('html/hatka/home/_about.htm',{})
+			@@include('html/_project-request.htm',{})
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
