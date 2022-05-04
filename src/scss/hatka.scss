@@ -845,3 +845,322 @@
     }
   }
 }
+
+// Proto page
+// Structure section ====
+
+.proto-about {
+  &__structure {
+    margin-bottom: 150px;
+    @media (max-width: $mobile) {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__visual {
+    margin-bottom: 150px;
+    @media (max-width: $pc) {
+      margin-bottom: 90px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 32px;
+    }
+  }
+  &__main-page {
+    margin-bottom: 155px;
+    @media (max-width: $mobile) {
+      margin-bottom: 80px;
+    }
+  }
+  &__catalog-elements {
+    margin-bottom: 175px;
+    @media (max-width: $tablet) {
+      margin-bottom: 120px;
+    }
+  }
+  &__comparing {
+    margin-bottom: 120px;
+    @media (max-width: $mobile) {
+      margin-bottom: 80px;
+    }
+  }
+  &__ordering {
+    margin-bottom: 120px;
+    @media (max-width: $mobile) {
+      margin-bottom: 80px;
+    }
+  }
+}
+.proto-structure {
+  &__container {
+    overflow-x: scroll;
+    background: url("../img/hatka/proto/structure/1-bg.png") bottom right -5% no-repeat;
+    @media (max-width: $mobile) {
+      background: none;
+    }
+  }
+
+  &__intro {
+    max-width: 840px;
+    width: 100%;
+    margin-bottom: 56px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 35px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__image {
+    max-width: 945px;
+    @media (max-width: $mobile) {
+      max-width: none;
+      width: 125%;
+    }
+  }
+}
+
+// Main-page section ====
+
+.main-page-proto {
+  &__info {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__paragraph {
+    @include flex-element(540);
+    &:first-child {
+      margin-right: 30px;
+    }
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &__content {
+    @media (max-width: $mobile) {
+      padding: 0 16px;
+    }
+  }
+}
+
+// Catalog elements section =====
+
+.catalog-elements {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__image {
+    flex: 0 1 percent(888, 1260);
+    margin-right: 20px;
+    @media (max-width: $tablet) {
+      margin-right: 0;
+    }
+  }
+
+  &__info {
+    @include flex-element(280);
+    @media (max-width: $tablet) {
+      flex: 1 1 100%;
+      max-width: none;
+      margin-bottom: 33px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.proto-comparing {
+  &__container {
+    //   position: relative;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   display: inline-block;
+    //   width: rem(818);
+    //   height: rem(599);
+    //   transform: translate(0, -15%);
+    //   background: url("../img/icons/yo-big.svg") no-repeat;
+    //   background-size: contain;
+    //   @media (max-width: $mobile) {
+    //     display: none;
+    //   }
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__info {
+    @include flex-element(415);
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__content {
+    @include flex-element(810);
+  }
+}
+
+// Comparing section =====
+
+.proto-comparing {
+  &__container {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: rem(870);
+      height: rem(549);
+      transform: translate(100px, -65%);
+      background: url("../img/icons/yoldi-waved-big.svg") no-repeat;
+      background-size: contain;
+      z-index: -1;
+      @media (max-width: $pc) {
+        transform: translate(0, -40%);
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    @include flex-element(415);
+    margin-left: 140px;
+    margin-right: 40px;
+    @media (max-width: $pc) {
+      margin-left: 0;
+    }
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      margin-right: 0;
+      max-width: none;
+      margin-bottom: 42px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__content {
+    @include flex-element(805);
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+      // margin: 0 -16px;
+    }
+  }
+
+  &__image {
+  }
+}
+
+// Ordering section ====
+
+.ordering-proto {
+  &__container {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: inline-block;
+      width: rem(222);
+      height: rem(1788);
+      transform: translate(0, -15%);
+      background: url("../img/icons/vertical-wave.svg") no-repeat;
+      background-size: contain;
+      z-index: -1;
+      @media (max-width: $tablet) {
+        transform: translate(0, 0);
+      }
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__info {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 80px;
+    @media (max-width: $mobile) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__image {
+  }
+}
