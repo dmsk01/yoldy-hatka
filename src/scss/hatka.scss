@@ -856,7 +856,6 @@
       margin-bottom: 120px;
     }
   }
-
   &__visual {
     margin-bottom: 150px;
     @media (max-width: $pc) {
@@ -888,6 +887,12 @@
     margin-bottom: 120px;
     @media (max-width: $mobile) {
       margin-bottom: 80px;
+    }
+  }
+  &__mobile {
+    margin-bottom: 150px;
+    @media (max-width: $mobile) {
+      margin-bottom: 120px;
     }
   }
 }
@@ -1119,24 +1124,26 @@
 
 .ordering-proto {
   &__container {
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: inline-block;
-      width: rem(222);
-      height: rem(1788);
-      transform: translate(0, -15%);
-      background: url("../img/icons/vertical-wave.svg") no-repeat;
-      background-size: contain;
-      z-index: -1;
-      @media (max-width: $tablet) {
-        transform: translate(0, 0);
-      }
-      @media (max-width: $mobile) {
-        display: none;
+    &_1400 {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: rem(222);
+        height: rem(1788);
+        transform: translate(0, -15%);
+        background: url("../img/icons/vertical-wave.svg") no-repeat;
+        background-size: contain;
+        z-index: -1;
+        @media (max-width: $tablet) {
+          transform: translate(0, 0);
+        }
+        @media (max-width: $mobile) {
+          display: none;
+        }
       }
     }
   }
@@ -1149,6 +1156,30 @@
     @media (max-width: $mobile) {
       margin-bottom: 33px;
     }
+  }
+
+  &__heading {
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+// Mobile section =====
+
+.mobile-proto {
+  &__container {
+    margin-bottom: 82px;
+    @media (max-width: $mobile) {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__info {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   &__heading {
