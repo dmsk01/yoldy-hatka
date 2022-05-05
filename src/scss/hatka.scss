@@ -1197,6 +1197,26 @@
       margin-bottom: 120px;
     }
   }
+
+  &__moodboard {
+    margin-bottom: 150px;
+    @media (max-width: $mobile) {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__naming {
+    margin-bottom: 150px;
+    @media (max-width: $mobile) {
+      margin-bottom: 120px;
+    }
+  }
+  &__logo {
+    margin-bottom: 150px;
+    @media (max-width: $mobile) {
+      margin-bottom: 120px;
+    }
+  }
 }
 .about-image {
   &__intro {
@@ -1306,6 +1326,10 @@
 
   &__decision {
     margin-bottom: 100px;
+    padding-left: 85px;
+    @media (max-width: $pc) {
+      padding-left: 0;
+    }
     @media (max-width: $mobile) {
       margin-bottom: 80px;
     }
@@ -1315,5 +1339,232 @@
   }
 
   &__example {
+    padding-left: 85px;
+    @media (max-width: $pc) {
+      padding-left: 0;
+    }
+  }
+}
+
+// Moodboard section ====
+
+.about-moonboard {
+  &__intro {
+    margin-bottom: 70px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__image {
+    &_desktop {
+    }
+
+    &_mobile {
+    }
+  }
+
+  &__info-block {
+    max-width: 720px;
+    width: 100%;
+  }
+
+  &__heading {
+    margin-bottom: 35px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+// Naming section =====
+
+.about-naming {
+  &__container {
+    background: url("../img/icons/hatka-big-name.svg") no-repeat;
+    background-size: 1160px 365px;
+    background-position: top 50px left;
+    @media (max-width: $pc) {
+      background-size: contain;
+    }
+    @media (max-width: $mobile) {
+      background: none;
+    }
+  }
+
+  &__intro {
+    padding: 0 27px;
+    @media (max-width: $pc) {
+      padding: 0;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: 65px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__main-info {
+    @include flex-element(420);
+    margin-right: 30px;
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 64px;
+    }
+  }
+
+  &__info-block {
+  }
+
+  &__heading {
+    margin-bottom: 35px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__aside-info {
+    padding-top: 50px;
+    margin-right: 50px;
+    @include flex-element(400);
+    @media (max-width: $pc) {
+      padding-right: 0;
+    }
+    @media (max-width: $mobile) {
+      padding-top: 0;
+      flex: 1 1 100%;
+      max-width: none;
+    }
+  }
+
+  &__content {
+  }
+}
+
+.aside-info {
+  &__inner {
+    display: flex;
+  }
+
+  &__image {
+    margin-right: 26px;
+    @media (max-width: $mobileSmall) {
+      margin-right: 16px;
+    }
+  }
+
+  &__list {
+    li {
+      white-space: nowrap;
+      @media (max-width: $mobileSmall) {
+        white-space: normal;
+      }
+    }
+  }
+}
+.naming-content {
+  padding-left: 55px;
+  max-width: 1095px;
+  @media (max-width: $pc) {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -12px;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    padding: 0 12px;
+    @include flex-element(347);
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+      padding: 0;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__image {
+  }
+}
+
+// Logo section ====
+
+.about-logo {
+  &__top {
+    margin-bottom: 86px;
+    @media (max-width: $mobile) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__container {
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    @include flex-element(420);
+    margin-right: 30px;
+    margin-top: 30px;
+    @media (max-width: $mobile) {
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 24px;
+      flex: 1 1 100%;
+      max-width: none;
+    }
+  }
+
+  &__info-block {
+  }
+
+  &__heading {
+    margin-bottom: 35px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__logo {
+    @include flex-element(556);
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+    }
+  }
+
+  &__image {
+  }
+
+  &__bottom {
+  }
+
+  &__line {
   }
 }
