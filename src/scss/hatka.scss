@@ -1229,6 +1229,12 @@
       margin-bottom: 120px;
     }
   }
+  &__identity {
+    margin-bottom: 150px;
+    @media (max-width: $mobile) {
+      margin-bottom: 120px;
+    }
+  }
 }
 .about-image {
   &__intro {
@@ -1671,6 +1677,18 @@
 // Typography section =====
 
 .about-typography {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 950px;
+    top: 50%;
+    right: 20%;
+    transform: translate(0%, -40%);
+    display: inline-block;
+    background: url("../img/icons/vertical-wave-2.svg") no-repeat;
+  }
   &__intro {
     margin-bottom: 70px;
     @media (max-width: $mobile) {
@@ -1679,6 +1697,8 @@
   }
 
   &__container {
+    position: relative;
+    z-index: 1;
   }
 
   &__info-block {
@@ -1762,10 +1782,52 @@
   &__body {
     flex: 1 1 auto;
   }
+}
 
-  &__alphabet {
+// Identity section ====
+
+.about-identity {
+  &__row {
+    display: flex;
+    align-items: center;
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
 
-  &__image {
+  &__content {
+    @include flex-element(680);
+    margin-right: 120px;
+    @media (max-width: $pc) {
+      margin-right: 100px;
+    }
+    @media (max-width: $tablet) {
+      margin-right: 50px;
+    }
+    @media (max-width: $mobile) {
+      margin-right: 0;
+      flex: 1 1 100%;
+      max-width: none;
+    }
+  }
+
+  &__info {
+    @include flex-element(420);
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__info-block {
+  }
+
+  &__heading {
+    margin-bottom: 35px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
   }
 }
