@@ -242,6 +242,7 @@
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
   &::-webkit-scrollbar-track {
+    box-shadow: none !important;
     -webkit-box-shadow: none !important;
     background-color: transparent;
   }
@@ -281,6 +282,9 @@ div[class*="__container_1240"] {
 }
 div[class*="__container_1260"] {
   max-width: 1260px;
+}
+div[class*="__container_1290"] {
+  max-width: 1290px;
 }
 div[class*="__container_1360"] {
   max-width: 1360px;
