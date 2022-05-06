@@ -1920,8 +1920,38 @@
 
 .design-about {
   &__main-page {
+    margin-bottom: 150px;
+    @media (max-width: $mobile) {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__goods-page {
+    margin-bottom: 70px;
+    @media (max-width: $mobile) {
+      margin-bottom: 120px;
+    }
+  }
+  &__comparing-page {
+    margin-bottom: 0;
+    @media (max-width: $tablet) {
+      margin-bottom: 120px;
+    }
+  }
+
+  &__order-page {
+  }
+
+  &__account-page {
+  }
+
+  &__grid {
+  }
+
+  &__styles {
   }
 }
+
 .main-page-design {
   &__intro {
     margin-bottom: 55px;
@@ -1935,7 +1965,7 @@
 
   &__info-block {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     @media (max-width: $mobile) {
       flex-direction: column;
     }
@@ -1960,6 +1990,13 @@
 
   &__body {
     @include flex-element(450);
+    padding-top: 15px;
+    &_short {
+      @include flex-element(350);
+    }
+    @media (max-width: $pc) {
+      padding-top: 0;
+    }
     @media (max-width: $mobile) {
       flex: 1 1 100%;
       max-width: none;
@@ -1973,5 +2010,97 @@
   }
 
   &__image {
+  }
+}
+
+// Goods page section =====
+
+.goods-page-design {
+  &_bg {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 700px;
+      height: 1890px;
+      top: 0;
+      right: 0;
+      background: url("../img/hatka/design/goods/bg.png") no-repeat;
+      background-size: contain;
+      transform: translate(-36%, 50px);
+      z-index: -1;
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+  }
+  &__intro {
+    margin-bottom: 45px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+// Comparing section ====
+
+.comparing-page-design {
+  background: url("../img/icons/yoldi-waved-big.svg") no-repeat;
+  background-position: left -5% center;
+  background-size: 38% auto;
+  &__container {
+  }
+
+  &__row {
+    display: flex;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__intro {
+    @include flex-element(350);
+    margin-right: 46px;
+    margin-left: 140px;
+    @media (max-width: $pc) {
+      margin-right: 25px;
+      margin-left: 0;
+    }
+    @media (max-width: $mobile) {
+      margin-right: 0;
+      margin-bottom: 24px;
+      max-width: none;
+      flex: 1 1 100%;
+    }
+  }
+
+  &__info-block {
+  }
+
+  &__heading {
+    margin-bottom: 35px;
+    @media (max-width: $mobile) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__body {
+  }
+
+  &__content {
+    @include flex-element(867);
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+    }
+  }
+
+  &__image {
+    &_desktop {
+    }
+
+    &_mobile {
+    }
   }
 }
