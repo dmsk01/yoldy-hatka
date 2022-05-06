@@ -156,6 +156,27 @@ body {
       }
     }
   }
+  &#hatka-design {
+    &::before {
+      background-image: linear-gradient(
+          180deg,
+          rgba(126, 126, 153, 0.2) 0%,
+          #2f2f39 96.37%
+        ),
+        url("@img/hatka/design/hero/bg.jpg");
+      @media (max-width: $mobile) {
+        height: 65%;
+        background-image: linear-gradient(
+            180deg,
+            rgba(126, 126, 153, 0.5) 0%,
+            #2f2f39 100%
+          ),
+          url("@img/hatka/design/hero/bg.jpg");
+        background-size: 200% auto;
+        background-position: top left;
+      }
+    }
+  }
   .lock & {
     overflow: hidden;
     touch-action: none;
