@@ -1938,13 +1938,7 @@
       margin-bottom: 120px;
     }
   }
-
-  &__order-page {
-  }
-
-  &__account-page {
-  }
-
+  
   &__grid {
     margin-top: 150px;
     margin-bottom: 150px;
@@ -2043,8 +2037,6 @@
   background: url("../img/icons/yoldi-waved-big.svg") no-repeat;
   background-position: left -5% center;
   background-size: 38% auto;
-  &__container {
-  }
 
   &__row {
     display: flex;
@@ -2069,17 +2061,11 @@
     }
   }
 
-  &__info-block {
-  }
-
   &__heading {
     margin-bottom: 35px;
     @media (max-width: $mobile) {
       margin-bottom: 24px;
     }
-  }
-
-  &__body {
   }
 
   &__content {
@@ -2101,9 +2087,6 @@
     @media (max-width: $tablet) {
       margin-bottom: 24px;
     }
-  }
-
-  &__container {
   }
 
   &__inner {
@@ -2148,10 +2131,6 @@
 
 // Styles section ====
 
-.design-about {
-  &__styles {
-  }
-}
 .styles-design {
   &__container {
     position: relative;
