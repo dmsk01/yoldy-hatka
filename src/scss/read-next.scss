@@ -1,0 +1,124 @@
+.read-next-block {
+  color: $mainDark;
+  &__container {
+    &_1120 {
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__card {
+  }
+}
+
+.card-read-next {
+  &__inner {
+    display: flex;
+    height: 100%;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    @include flex-element(615);
+    min-height: 100%;
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+    }
+  }
+
+  &__image-ibg {
+    height: 100%;
+    @media (max-width: $mobile) {
+      padding-bottom: percent(220, 288);
+    }
+    // padding-bottom: percent(615, 1120);
+  }
+
+  &__info {
+    @include flex-element(505);
+    @media (max-width: $mobile) {
+      flex: 1 1 100%;
+      max-width: none;
+    }
+  }
+}
+.card-info {
+  background: #eee;
+  padding: 100px 30px 30px 85px;
+  @media (max-width: $tablet) {
+    padding: 26px 16px 16px 16px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 17px;
+    line-height: math.div(29, 17);
+  }
+
+  &__project {
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__page {
+    margin-bottom: 5px;
+    @media (max-width: $mobile) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__description {
+    max-width: 310px;
+    width: 100%;
+    flex: 1 0 auto;
+  }
+
+  &__button {
+    text-align: right;
+    padding-right: 58px;
+    @media (max-width: $mobile) {
+      padding-right: 40px;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    flex-basis: 116px;
+    height: 116px;
+    display: inline-flex;
+    align-items: center;
+    color: inherit;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      display: inline-block;
+      width: 116px;
+      height: 116px;
+      border-radius: 50%;
+      transform: translate(50%, -50%);
+      background: $mainYellow;
+      @media (max-width: $mobile) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    @media (max-width: $mobile) {
+      height: 80px;
+      flex-basis: 80px;
+    }
+  }
+  &__icon {
+    position: relative;
+    z-index: 1;
+  }
+}
